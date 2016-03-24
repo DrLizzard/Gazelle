@@ -66,7 +66,7 @@ class Requests {
 		// Try to fetch the requests from the cache first.
 		foreach ($RequestIDs as $i => $RequestID) {
 			if (!is_number($RequestID)) {
-				unset($RequestIDs[$i], $Found[$GroupID], $NotFound[$GroupID]);
+				unset($RequestIDs[$i], $Found[$RequestID], $NotFound[$RequestID]);
 				continue;
 			}
 			$Data = G::$Cache->get_value("request_$RequestID");
